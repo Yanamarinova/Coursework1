@@ -31,14 +31,20 @@ overflow: hidden;
 	margin-bottom: 10px;
 }
 
+
 /*Header*/
 header {
 	text-align: left;
 	padding: 30px;
-	position:relative;
 	background:rgb(238, 210, 214);
 	min-height: 70px;
 	border-bottom: black 3px solid;
+	display:flex;
+	flex-direction: row;
+}
+
+header .container, header nav {
+	flex:1;
 }
 
 header #brand {
@@ -51,8 +57,8 @@ header #brand h1 {
 
 header li {
 	float: left;
-	display: inline;
 	padding: 0 20px 0 20px;
+	display:inline;	
 }
 
 header .current a{
@@ -64,13 +70,10 @@ header .current a{
 	font-size: 0.9em;
 	word-spacing: 1em;
 	text-transform: uppercase;
-	height: 20px;
 	transition: border-bottom 0.5s;
-	float: right;
-	margin-bottom: 20px;
-
-	
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 #main_nav  a{ /* this is each word */
 	color: gray;
@@ -87,8 +90,37 @@ header .current a{
 	color: black;
 }
 
+#main h2{
+	float: left;
+	padding: 20px;
+	width: 100%;
+	height: auto;
+}
+
+#main .video {
+	padding-left: 10px;
+	padding-right: 10px;
+	outline: none;
+}
+
+#main .map{
+	height: 400px;
+	width: 100%; 
+}
+
+.container h2{
+	float: left;
+}
+
+.container h3{
+	float: right;
+}
+	
+.container #table {
+	float: right;
+}
+
 header img.logo {
-	position: absolute;
 	width: 160px;
 	height: 140px;
 	right:0;
@@ -98,7 +130,7 @@ header img.logo {
 /*Showcase*/
 #showcase {
 min-height: 400px;
-background: url(../images/cupcake1.jpeg) no-repeat 0 -350px;
+background: url(../images/cupcake1.jpeg) no-repeat 0 -450px;
 text-align: center;
 color: white;
 }
